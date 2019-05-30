@@ -13,6 +13,9 @@
 		2E8CA865229EC1F900E470F7 /* Task_tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CA863229EC1F900E470F7 /* Task_tracker.xcdatamodeld */; };
 		2E8CA867229EC1FD00E470F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8CA866229EC1FD00E470F7 /* Assets.xcassets */; };
 		2E8CA86A229EC1FD00E470F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8CA868229EC1FD00E470F7 /* LaunchScreen.storyboard */; };
+		2E8CA896229EECE900E470F7 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CA895229EECE900E470F7 /* UserDefaultsExtensions.swift */; };
+		2E8CA898229EED3600E470F7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CA897229EED3600E470F7 /* Task.swift */; };
+		2E8CA89A229EF83E00E470F7 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CA899229EF83E00E470F7 /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2E8CA866229EC1FD00E470F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E8CA869229EC1FD00E470F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E8CA86B229EC1FD00E470F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E8CA895229EECE900E470F7 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
+		2E8CA897229EED3600E470F7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		2E8CA899229EF83E00E470F7 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		2E8CA85B229EC1F900E470F7 /* Task tracker */ = {
 			isa = PBXGroup;
 			children = (
+				2E8CA89B229EF8F000E470F7 /* VC */,
+				2E8CA89C229EF8F900E470F7 /* Data */,
+				2E8CA89D229EF91100E470F7 /* Storyboards */,
 				2E8CA85C229EC1F900E470F7 /* AppDelegate.swift */,
-				2E8CA85E229EC1F900E470F7 /* ViewController.swift */,
-				2E8CA860229EC1F900E470F7 /* Main.storyboard */,
 				2E8CA866229EC1FD00E470F7 /* Assets.xcassets */,
 				2E8CA868229EC1FD00E470F7 /* LaunchScreen.storyboard */,
 				2E8CA86B229EC1FD00E470F7 /* Info.plist */,
 				2E8CA863229EC1F900E470F7 /* Task_tracker.xcdatamodeld */,
 			);
 			path = "Task tracker";
+			sourceTree = "<group>";
+		};
+		2E8CA89B229EF8F000E470F7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				2E8CA85E229EC1F900E470F7 /* ViewController.swift */,
+				2E8CA899229EF83E00E470F7 /* AddTaskViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		2E8CA89C229EF8F900E470F7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2E8CA895229EECE900E470F7 /* UserDefaultsExtensions.swift */,
+				2E8CA897229EED3600E470F7 /* Task.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2E8CA89D229EF91100E470F7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2E8CA860229EC1F900E470F7 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E8CA85F229EC1F900E470F7 /* ViewController.swift in Sources */,
+				2E8CA89A229EF83E00E470F7 /* AddTaskViewController.swift in Sources */,
+				2E8CA896229EECE900E470F7 /* UserDefaultsExtensions.swift in Sources */,
 				2E8CA865229EC1F900E470F7 /* Task_tracker.xcdatamodeld in Sources */,
+				2E8CA898229EED3600E470F7 /* Task.swift in Sources */,
 				2E8CA85D229EC1F900E470F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
