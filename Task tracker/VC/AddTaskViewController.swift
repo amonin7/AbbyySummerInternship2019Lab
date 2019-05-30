@@ -10,11 +10,15 @@ import UIKit
 import UserNotifications
 
 class AddTaskViewController: UIViewController, UITextFieldDelegate {
-    var task = Task(name: "", date: Date(), descr: "")
+    var task = Task(name: "", date: Date(), descr: "", stat: "")
 
     @IBOutlet weak var titleText: UITextField!
+    
     @IBOutlet weak var timePicker: UIDatePicker!
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    @IBOutlet weak var noteText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,11 +50,11 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     @IBAction func save(_ sender: Any) {
         let name = titleText.text
         let time = timePicker.date
+        let note = noteText.text
         
-        task = Task(name: name!, date: time, descr: "")
+        task = Task(name: name!, date: time, descr: note ?? "", stat: "online")
         taskList.append(task)
         self.dismiss(animated: true, completion: nil)
-        
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -77,18 +81,12 @@ extension AddTaskViewController {
         if saveButton === sender as AnyObject? {
             let name = titleText.text
             var time = timePicker.date
+            let note = noteText.text
             
             let timeinterval = floor(time.timeIntervalSinceReferenceDate / 60) * 60
             time = Date(timeIntervalSinceReferenceDate: timeinterval)
             
-            //let notification = UNNotification
-            //Notification.start
-            
-            //let ntf = UNNotificationRequest()
-            //ntf.start
-            
-            
-            task = Task(name: name!, date: time, descr: "")
+            task = Task(name: name!, date: time, descr: note ?? "", stat: "online")
         }
     }
     

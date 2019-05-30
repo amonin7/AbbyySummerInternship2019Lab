@@ -16,6 +16,7 @@
 		2E8CA896229EECE900E470F7 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CA895229EECE900E470F7 /* UserDefaultsExtensions.swift */; };
 		2E8CA898229EED3600E470F7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CA897229EED3600E470F7 /* Task.swift */; };
 		2E8CA89A229EF83E00E470F7 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CA899229EF83E00E470F7 /* AddTaskViewController.swift */; };
+		2E8CA89F22A0025500E470F7 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CA89E22A0025500E470F7 /* MyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2E8CA895229EECE900E470F7 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		2E8CA897229EED3600E470F7 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		2E8CA899229EF83E00E470F7 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		2E8CA89E22A0025500E470F7 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCell.swift; path = "Task tracker/Data/MyCell.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				2E8CA895229EECE900E470F7 /* UserDefaultsExtensions.swift */,
 				2E8CA897229EED3600E470F7 /* Task.swift */,
+				2E8CA89E22A0025500E470F7 /* MyCell.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				2E8CA89A229EF83E00E470F7 /* AddTaskViewController.swift in Sources */,
 				2E8CA896229EECE900E470F7 /* UserDefaultsExtensions.swift in Sources */,
 				2E8CA865229EC1F900E470F7 /* Task_tracker.xcdatamodeld in Sources */,
+				2E8CA89F22A0025500E470F7 /* MyCell.swift in Sources */,
 				2E8CA898229EED3600E470F7 /* Task.swift in Sources */,
 				2E8CA85D229EC1F900E470F7 /* AppDelegate.swift in Sources */,
 			);

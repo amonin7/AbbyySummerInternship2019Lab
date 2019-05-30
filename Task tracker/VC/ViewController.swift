@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     let locale = NSLocale.current
     
     @IBOutlet weak var mainTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -45,10 +45,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCell
         let task = taskList[indexPath.row]
-        cell.textLabel?.text = task.taskName
-        cell.detailTextLabel?.text = "Due " + dateFormater.string(from: task.taskDate)
+        cell.titileLabel.text = task.taskName
+        cell.dateLabel.text = "Due " + dateFormater.string(from: task.taskDate)
+        cell.statusLabel.text = task.status
         
         return cell
     }
