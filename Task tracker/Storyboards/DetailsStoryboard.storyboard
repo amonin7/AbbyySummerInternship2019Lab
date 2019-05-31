@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PZs-Db-xdb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Details View Controller-->
+        <scene sceneID="LCo-0r-oaM">
+            <objects>
+                <viewController id="waZ-GO-ymC" customClass="DetailsViewController" customModule="Task_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PpB-uq-SXd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0u0-c9-8Vr">
+                                <rect key="frame" x="89" y="80" width="270" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAj-vQ-cFU">
+                                <rect key="frame" x="16" y="154" width="343" height="423"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuX-nM-pig">
+                                <rect key="frame" x="165" y="593" width="194" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Задача" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6t-La-STS">
+                                <rect key="frame" x="16" y="80" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заметка к ней" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQr-5M-LPq">
+                                <rect key="frame" x="16" y="117" width="113.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время дедлайна" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwa-Eu-Yzu">
+                                <rect key="frame" x="16" y="593" width="133" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Статус задачи" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVk-XD-wEb">
+                                <rect key="frame" x="16" y="630" width="115.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2g-bT-Eyp">
+                                <rect key="frame" x="147.5" y="630" width="211.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dwa-Eu-Yzu" firstAttribute="leading" secondItem="GkD-PE-Fev" secondAttribute="leading" constant="16" id="0gQ-HE-Ee0"/>
+                            <constraint firstItem="AAj-vQ-cFU" firstAttribute="top" secondItem="wQr-5M-LPq" secondAttribute="bottom" constant="16" id="5Xw-kX-ZwK"/>
+                            <constraint firstItem="wQr-5M-LPq" firstAttribute="top" secondItem="0u0-c9-8Vr" secondAttribute="bottom" constant="16" id="6qt-Xo-fhM"/>
+                            <constraint firstItem="YuX-nM-pig" firstAttribute="top" secondItem="AAj-vQ-cFU" secondAttribute="bottom" constant="16" id="7OO-kP-h3l"/>
+                            <constraint firstItem="WVk-XD-wEb" firstAttribute="top" secondItem="Dwa-Eu-Yzu" secondAttribute="bottom" constant="16" id="AdC-gp-bdi"/>
+                            <constraint firstItem="GkD-PE-Fev" firstAttribute="bottom" secondItem="WVk-XD-wEb" secondAttribute="bottom" constant="16" id="Car-Wn-fdn"/>
+                            <constraint firstItem="T6t-La-STS" firstAttribute="top" secondItem="GkD-PE-Fev" secondAttribute="top" constant="16" id="Jk5-3a-bi8"/>
+                            <constraint firstItem="wQr-5M-LPq" firstAttribute="leading" secondItem="GkD-PE-Fev" secondAttribute="leading" constant="16" id="MRY-co-nt6"/>
+                            <constraint firstItem="k2g-bT-Eyp" firstAttribute="top" secondItem="YuX-nM-pig" secondAttribute="bottom" constant="16" id="Vbx-w3-q7g"/>
+                            <constraint firstItem="YuX-nM-pig" firstAttribute="leading" secondItem="Dwa-Eu-Yzu" secondAttribute="trailing" constant="16" id="Xzb-jU-Faz"/>
+                            <constraint firstItem="GkD-PE-Fev" firstAttribute="trailing" secondItem="0u0-c9-8Vr" secondAttribute="trailing" constant="16" id="c7p-l6-l8H"/>
+                            <constraint firstItem="GkD-PE-Fev" firstAttribute="trailing" secondItem="AAj-vQ-cFU" secondAttribute="trailing" constant="16" id="coo-Yl-LZO"/>
+                            <constraint firstItem="Dwa-Eu-Yzu" firstAttribute="top" secondItem="AAj-vQ-cFU" secondAttribute="bottom" constant="16" id="dOk-9J-Sm7"/>
+                            <constraint firstItem="T6t-La-STS" firstAttribute="leading" secondItem="GkD-PE-Fev" secondAttribute="leading" constant="16" id="esW-dG-OaG"/>
+                            <constraint firstItem="AAj-vQ-cFU" firstAttribute="leading" secondItem="GkD-PE-Fev" secondAttribute="leading" constant="16" id="fJt-qT-4WV"/>
+                            <constraint firstItem="k2g-bT-Eyp" firstAttribute="leading" secondItem="WVk-XD-wEb" secondAttribute="trailing" constant="16" id="jg9-Z3-yvF"/>
+                            <constraint firstItem="0u0-c9-8Vr" firstAttribute="top" secondItem="GkD-PE-Fev" secondAttribute="top" constant="16" id="jxb-1r-9KO"/>
+                            <constraint firstItem="GkD-PE-Fev" firstAttribute="trailing" secondItem="k2g-bT-Eyp" secondAttribute="trailing" constant="16" id="pTM-2D-FfK"/>
+                            <constraint firstItem="WVk-XD-wEb" firstAttribute="leading" secondItem="GkD-PE-Fev" secondAttribute="leading" constant="16" id="r0t-f0-Vds"/>
+                            <constraint firstItem="GkD-PE-Fev" firstAttribute="trailing" secondItem="YuX-nM-pig" secondAttribute="trailing" constant="16" id="rGI-og-7lQ"/>
+                            <constraint firstItem="0u0-c9-8Vr" firstAttribute="leading" secondItem="T6t-La-STS" secondAttribute="trailing" constant="16" id="sas-9Z-uG3"/>
+                            <constraint firstItem="GkD-PE-Fev" firstAttribute="bottom" secondItem="k2g-bT-Eyp" secondAttribute="bottom" constant="16" id="tJz-Qb-LYB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GkD-PE-Fev"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y2T-La-cd4">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="8an-Lj-H6Y">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="waZ-GO-ymC" id="zOV-Y0-wOt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="X96-QA-cAO">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="waZ-GO-ymC" id="bAq-wn-AfM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="YuX-nM-pig" id="uRo-Kc-sQm"/>
+                        <outlet property="noteLabel" destination="AAj-vQ-cFU" id="FVh-w6-t4m"/>
+                        <outlet property="statusLabel" destination="k2g-bT-Eyp" id="9xQ-iG-TeR"/>
+                        <outlet property="taskNameLabel" destination="0u0-c9-8Vr" id="FkU-Z5-z9q"/>
+                        <segue destination="5t5-R8-qac" kind="presentation" identifier="edit" id="EJV-6p-zEI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QhH-9f-AVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="150.67466266866569"/>
+        </scene>
+        <!--EditStoryboard-->
+        <scene sceneID="lk6-eU-upL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditStoryboard" id="5t5-R8-qac" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Jz-IO-Yfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2504" y="150"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AN1-ri-Yz5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PZs-Db-xdb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ke0-0q-yzf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="waZ-GO-ymC" kind="relationship" relationship="rootViewController" id="dVO-hS-eQG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g64-pm-Eih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784.79999999999995" y="150.67466266866569"/>
+        </scene>
+    </scenes>
+</document>

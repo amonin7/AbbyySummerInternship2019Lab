@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xJz-B0-QvZ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit View Controller-->
+        <scene sceneID="G5f-jJ-uT9">
+            <objects>
+                <viewController id="IuT-8X-2II" customClass="EditViewController" customModule="Task_tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgu-p3-HFt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите заголовок" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJV-23-fWx">
+                                <rect key="frame" x="176" y="104" width="222" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Awx-fB-51Q">
+                                <rect key="frame" x="0.0" y="549" width="414" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="580842712.18445206">
+                                    <!--2019-05-29 17:11:52 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="timeChanged:" destination="IuT-8X-2II" eventType="valueChanged" id="Clo-z0-Uzq"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок задачи" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLu-C5-WCd">
+                                <rect key="frame" x="16" y="108" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заметка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLW-L5-4kw">
+                                <rect key="frame" x="16" y="145" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время и дата дедлайна" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-S4-ubx">
+                                <rect key="frame" x="112.5" y="520" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите помечение к задаче" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2vC-Ie-zWp">
+                                <rect key="frame" x="16" y="182" width="382" height="322"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="O6F-5h-rh2">
+                                <rect key="frame" x="16" y="818" width="382" height="29"/>
+                                <segments>
+                                    <segment title="Новая"/>
+                                    <segment title="В процессе"/>
+                                    <segment title="Выполнено"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segControlTapped:" destination="IuT-8X-2II" eventType="valueChanged" id="nR0-nH-wpM"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приоритет задачи" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oT6-WA-ZNf">
+                                <rect key="frame" x="8" y="781" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LfL-j5-dnT" firstAttribute="trailing" secondItem="2vC-Ie-zWp" secondAttribute="trailing" constant="16" id="196-TG-vy4"/>
+                            <constraint firstItem="hLu-C5-WCd" firstAttribute="top" secondItem="LfL-j5-dnT" secondAttribute="top" constant="20" id="47K-bI-Sac"/>
+                            <constraint firstItem="2vC-Ie-zWp" firstAttribute="top" secondItem="gLW-L5-4kw" secondAttribute="bottom" constant="16" id="51a-D1-D4J"/>
+                            <constraint firstItem="Awx-fB-51Q" firstAttribute="trailing" secondItem="LfL-j5-dnT" secondAttribute="trailing" id="6ex-AS-pEJ"/>
+                            <constraint firstItem="LfL-j5-dnT" firstAttribute="trailing" secondItem="O6F-5h-rh2" secondAttribute="trailing" constant="16" id="8eY-2c-YUn"/>
+                            <constraint firstItem="O6F-5h-rh2" firstAttribute="top" secondItem="oT6-WA-ZNf" secondAttribute="bottom" constant="16" id="GXy-QX-2E0"/>
+                            <constraint firstItem="oT6-WA-ZNf" firstAttribute="top" secondItem="Awx-fB-51Q" secondAttribute="bottom" constant="16" id="Gqi-Ad-PbQ"/>
+                            <constraint firstItem="hLu-C5-WCd" firstAttribute="leading" secondItem="LfL-j5-dnT" secondAttribute="leading" constant="16" id="MMW-M1-7YK"/>
+                            <constraint firstItem="2vC-Ie-zWp" firstAttribute="leading" secondItem="LfL-j5-dnT" secondAttribute="leading" constant="16" id="Msu-cR-tDc"/>
+                            <constraint firstItem="gLW-L5-4kw" firstAttribute="top" secondItem="hLu-C5-WCd" secondAttribute="bottom" constant="16" id="P1v-Sx-Vri"/>
+                            <constraint firstItem="Awx-fB-51Q" firstAttribute="leading" secondItem="LfL-j5-dnT" secondAttribute="leading" id="QCs-Ha-gNj"/>
+                            <constraint firstItem="fcC-S4-ubx" firstAttribute="centerX" secondItem="LfL-j5-dnT" secondAttribute="centerX" id="Qi6-54-mio"/>
+                            <constraint firstItem="O6F-5h-rh2" firstAttribute="leading" secondItem="LfL-j5-dnT" secondAttribute="leading" constant="16" id="R9j-OG-lVg"/>
+                            <constraint firstItem="gLW-L5-4kw" firstAttribute="leading" secondItem="LfL-j5-dnT" secondAttribute="leading" constant="16" id="U2V-R8-RTG"/>
+                            <constraint firstItem="KJV-23-fWx" firstAttribute="leading" secondItem="hLu-C5-WCd" secondAttribute="trailing" constant="16" id="YcW-A0-oJ5"/>
+                            <constraint firstItem="oT6-WA-ZNf" firstAttribute="centerX" secondItem="LfL-j5-dnT" secondAttribute="centerX" id="bCB-gb-WFs"/>
+                            <constraint firstItem="oT6-WA-ZNf" firstAttribute="leading" secondItem="LfL-j5-dnT" secondAttribute="leading" constant="8" id="bTX-49-5Pp"/>
+                            <constraint firstItem="KJV-23-fWx" firstAttribute="top" secondItem="LfL-j5-dnT" secondAttribute="top" constant="16" id="cpa-of-Gm3"/>
+                            <constraint firstItem="LfL-j5-dnT" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gLW-L5-4kw" secondAttribute="trailing" symbolic="YES" id="gZJ-dA-PII"/>
+                            <constraint firstItem="fcC-S4-ubx" firstAttribute="top" secondItem="2vC-Ie-zWp" secondAttribute="bottom" constant="16" id="iRp-gG-D2l"/>
+                            <constraint firstItem="LfL-j5-dnT" firstAttribute="bottom" secondItem="O6F-5h-rh2" secondAttribute="bottom" constant="16" id="jwS-zk-S6y"/>
+                            <constraint firstItem="Awx-fB-51Q" firstAttribute="top" secondItem="fcC-S4-ubx" secondAttribute="bottom" constant="8" id="mbm-Ej-8iJ"/>
+                            <constraint firstItem="LfL-j5-dnT" firstAttribute="trailing" secondItem="KJV-23-fWx" secondAttribute="trailing" constant="16" id="pJW-JG-I33"/>
+                            <constraint firstItem="LfL-j5-dnT" firstAttribute="trailing" secondItem="oT6-WA-ZNf" secondAttribute="trailing" constant="8" id="zxK-Jz-vef"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LfL-j5-dnT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4rC-sC-Gc2">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="v4Y-Um-OL9">
+                            <connections>
+                                <action selector="cancel:" destination="IuT-8X-2II" id="XSc-pV-k4W"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CwO-wz-poV">
+                            <connections>
+                                <action selector="save:" destination="IuT-8X-2II" id="76M-DZ-vbX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="noteText" destination="2vC-Ie-zWp" id="0ki-uV-4xj"/>
+                        <outlet property="saveButton" destination="CwO-wz-poV" id="EZz-lW-SNZ"/>
+                        <outlet property="segControl" destination="O6F-5h-rh2" id="1TZ-bT-ZWV"/>
+                        <outlet property="timePicker" destination="Awx-fB-51Q" id="gj6-ey-1al"/>
+                        <outlet property="titleText" destination="KJV-23-fWx" id="Jii-G9-eMr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cie-uJ-W0M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2607.2463768115945" y="4.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fsR-28-RdW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xJz-B0-QvZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WO7-D1-nlq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IuT-8X-2II" kind="relationship" relationship="rootViewController" id="7IV-wm-DoJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLb-EF-j0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697.1014492753625" y="4.6875"/>
+        </scene>
+    </scenes>
+</document>

@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     func setup() {
-        dateFormater.locale = locale
+        dateFormater.locale = NSLocale.current
         dateFormater.dateStyle = .medium
         dateFormater.timeStyle = .short
     }
@@ -45,6 +45,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        setup()
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCell
         let task = taskList[indexPath.row]
         cell.titileLabel.text = task.taskName
@@ -62,5 +63,19 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "taskDetails", sender: indexPath.row)
+    }
+}
+extension ViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "taskDetails" {
+            let destVC = segue.destination as! UINavigationController
+            if let detVC = destVC.topViewController as? DetailsViewController {
+                let taskid = sender as? Int ?? -1
+                detVC.taskID = taskid
+            }
+        }
+    }
 }
 

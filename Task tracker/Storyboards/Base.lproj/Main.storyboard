@@ -87,6 +87,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="JAq-z4-QTQ" id="Hrf-2x-rlm"/>
+                        <segue destination="wpz-j8-jPT" kind="presentation" identifier="taskDetails" id="Wse-Nx-EFK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -228,6 +229,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5LA-KW-U14" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
+        </scene>
+        <!--DetailsStoryboard-->
+        <scene sceneID="HaM-Eq-mMC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailsStoryboard" id="wpz-j8-jPT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ga6-t1-3pd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="676"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CGV-xL-7cG">

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E82723822A1315F00C6AFE0 /* EditStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E82723722A1315F00C6AFE0 /* EditStoryboard.storyboard */; };
+		2E82723A22A1321C00C6AFE0 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E82723922A1321C00C6AFE0 /* EditViewController.swift */; };
+		2E82723C22A1ABB400C6AFE0 /* DetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E82723B22A1ABB400C6AFE0 /* DetailsStoryboard.storyboard */; };
+		2E82723E22A1ADAE00C6AFE0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E82723D22A1ADAE00C6AFE0 /* DetailsViewController.swift */; };
 		2E8CA85D229EC1F900E470F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CA85C229EC1F900E470F7 /* AppDelegate.swift */; };
 		2E8CA85F229EC1F900E470F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CA85E229EC1F900E470F7 /* ViewController.swift */; };
 		2E8CA862229EC1F900E470F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8CA860229EC1F900E470F7 /* Main.storyboard */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E82723722A1315F00C6AFE0 /* EditStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditStoryboard.storyboard; sourceTree = "<group>"; };
+		2E82723922A1321C00C6AFE0 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		2E82723B22A1ABB400C6AFE0 /* DetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsStoryboard.storyboard; sourceTree = "<group>"; };
+		2E82723D22A1ADAE00C6AFE0 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		2E8CA859229EC1F900E470F7 /* Task tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8CA85C229EC1F900E470F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E8CA85E229EC1F900E470F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +89,8 @@
 			children = (
 				2E8CA85E229EC1F900E470F7 /* ViewController.swift */,
 				2E8CA899229EF83E00E470F7 /* AddTaskViewController.swift */,
+				2E82723D22A1ADAE00C6AFE0 /* DetailsViewController.swift */,
+				2E82723922A1321C00C6AFE0 /* EditViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -99,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				2E8CA860229EC1F900E470F7 /* Main.storyboard */,
+				2E82723722A1315F00C6AFE0 /* EditStoryboard.storyboard */,
+				2E82723B22A1ABB400C6AFE0 /* DetailsStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -162,8 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E8CA86A229EC1FD00E470F7 /* LaunchScreen.storyboard in Resources */,
+				2E82723C22A1ABB400C6AFE0 /* DetailsStoryboard.storyboard in Resources */,
 				2E8CA867229EC1FD00E470F7 /* Assets.xcassets in Resources */,
 				2E8CA862229EC1F900E470F7 /* Main.storyboard in Resources */,
+				2E82723822A1315F00C6AFE0 /* EditStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +188,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E82723A22A1321C00C6AFE0 /* EditViewController.swift in Sources */,
 				2E8CA85F229EC1F900E470F7 /* ViewController.swift in Sources */,
+				2E82723E22A1ADAE00C6AFE0 /* DetailsViewController.swift in Sources */,
 				2E8CA89A229EF83E00E470F7 /* AddTaskViewController.swift in Sources */,
 				2E8CA896229EECE900E470F7 /* UserDefaultsExtensions.swift in Sources */,
 				2E8CA865229EC1F900E470F7 /* Task_tracker.xcdatamodeld in Sources */,
