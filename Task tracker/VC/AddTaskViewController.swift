@@ -11,6 +11,8 @@ import UserNotifications
 
 class AddTaskViewController: UIViewController, UITextFieldDelegate {
     var task = Task(name: "", date: Date(), descr: "", stat: "")
+    
+    var status = "Новая"
 
     @IBOutlet weak var titleText: UITextField!
     
@@ -19,6 +21,8 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     @IBOutlet weak var noteText: UITextField!
+    
+    @IBOutlet weak var segControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +56,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
         let time = timePicker.date
         let note = noteText.text
         
-        task = Task(name: name!, date: time, descr: note ?? "", stat: "online")
+        task = Task(name: name!, date: time, descr: note ?? "", stat: status)
         taskList.append(task)
         self.dismiss(animated: true, completion: nil)
     }
@@ -60,6 +64,23 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func segControlTapped(_ sender: Any) {
+        let getIndex = segControl.selectedSegmentIndex
+        print(getIndex)
+        
+        switch (getIndex) {
+        case 0:
+            status = "Новая"
+        case 1:
+            status = "В процессе"
+        case 2:
+            status = "Выволнена"
+        default:
+            print("didn't select any")
+        }
+    }
+    
 }
 extension AddTaskViewController {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -76,19 +97,17 @@ extension AddTaskViewController {
         saveButton.isEnabled = false
     }
 }
-extension AddTaskViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if saveButton === sender as AnyObject? {
-            let name = titleText.text
-            var time = timePicker.date
-            let note = noteText.text
-            
-            let timeinterval = floor(time.timeIntervalSinceReferenceDate / 60) * 60
-            time = Date(timeIntervalSinceReferenceDate: timeinterval)
-            
-            task = Task(name: name!, date: time, descr: note ?? "", stat: "online")
-        }
-    }
-    
-    
-}
+//extension AddTaskViewController {
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if saveButton === sender as AnyObject? {
+//            let name = titleText.text
+//            var time = timePicker.date
+//            let note = noteText.text
+//            
+//            let timeinterval = floor(time.timeIntervalSinceReferenceDate / 60) * 60
+//            time = Date(timeIntervalSinceReferenceDate: timeinterval)
+//            
+//            task = Task(name: name!, date: time, descr: note ?? "", stat: "online")
+//        }
+//    }
+//}

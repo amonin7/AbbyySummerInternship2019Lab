@@ -108,7 +108,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gwW-s3-S5i">
-                                <rect key="frame" x="0.0" y="354" width="336" height="216"/>
+                                <rect key="frame" x="0.0" y="354" width="375" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="580842712.18445206">
                                     <!--2019-05-29 17:11:52 +0000-->
                                 </date>
@@ -147,9 +147,12 @@
                                     <segment title="В процессе"/>
                                     <segment title="Выполнено"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segControlTapped:" destination="ebN-us-KKK" eventType="valueChanged" id="c94-ZV-jCo"/>
+                                </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приоритет задачи" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPZ-nL-uUC">
-                                <rect key="frame" x="114" y="586" width="147" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приоритет задачи" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPZ-nL-uUC">
+                                <rect key="frame" x="8" y="586" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -163,6 +166,7 @@
                             <constraint firstItem="wjc-L3-TXR" firstAttribute="top" secondItem="IPZ-nL-uUC" secondAttribute="bottom" constant="16" id="FxL-mZ-AQH"/>
                             <constraint firstItem="gwW-s3-S5i" firstAttribute="leading" secondItem="fmP-Uk-CXJ" secondAttribute="leading" id="G6D-CB-bqK"/>
                             <constraint firstItem="1Vz-bh-nOA" firstAttribute="centerX" secondItem="fmP-Uk-CXJ" secondAttribute="centerX" id="GoU-NC-Qq2"/>
+                            <constraint firstItem="fmP-Uk-CXJ" firstAttribute="trailing" secondItem="IPZ-nL-uUC" secondAttribute="trailing" constant="8" id="GzX-Sm-ASe"/>
                             <constraint firstItem="fmP-Uk-CXJ" firstAttribute="bottom" secondItem="wjc-L3-TXR" secondAttribute="bottom" constant="16" id="Hrs-gd-ibE"/>
                             <constraint firstItem="fmP-Uk-CXJ" firstAttribute="trailing" secondItem="0aw-Wd-lvv" secondAttribute="trailing" constant="16" id="ISD-Td-I8W"/>
                             <constraint firstItem="xdk-eG-ZYp" firstAttribute="top" secondItem="2T6-eh-NDg" secondAttribute="bottom" constant="16" id="Wug-bc-zsx"/>
@@ -174,6 +178,7 @@
                             <constraint firstItem="2T6-eh-NDg" firstAttribute="leading" secondItem="fmP-Uk-CXJ" secondAttribute="leading" constant="16" id="fHW-Gp-CVO"/>
                             <constraint firstItem="1Vz-bh-nOA" firstAttribute="top" secondItem="Qhd-aX-dhm" secondAttribute="bottom" constant="16" id="guL-Rl-MeP"/>
                             <constraint firstItem="Qhd-aX-dhm" firstAttribute="leading" secondItem="fmP-Uk-CXJ" secondAttribute="leading" constant="16" id="h7s-Pm-oBC"/>
+                            <constraint firstItem="IPZ-nL-uUC" firstAttribute="leading" secondItem="fmP-Uk-CXJ" secondAttribute="leading" constant="8" id="hxH-TI-H9h"/>
                             <constraint firstItem="wjc-L3-TXR" firstAttribute="leading" secondItem="fmP-Uk-CXJ" secondAttribute="leading" constant="16" id="i8F-Lu-mBj"/>
                             <constraint firstItem="IPZ-nL-uUC" firstAttribute="centerX" secondItem="fmP-Uk-CXJ" secondAttribute="centerX" id="igj-S7-PL6"/>
                             <constraint firstItem="fmP-Uk-CXJ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xdk-eG-ZYp" secondAttribute="trailing" symbolic="YES" id="jWX-XY-vVg"/>
@@ -197,6 +202,7 @@
                     <connections>
                         <outlet property="noteText" destination="Qhd-aX-dhm" id="O8P-9g-N0x"/>
                         <outlet property="saveButton" destination="fn3-a3-vLv" id="zfn-iU-g4y"/>
+                        <outlet property="segControl" destination="wjc-L3-TXR" id="fSW-aR-GSU"/>
                         <outlet property="timePicker" destination="gwW-s3-S5i" id="6M8-4S-yTL"/>
                         <outlet property="titleText" destination="0aw-Wd-lvv" id="3nJ-qc-2nK"/>
                     </connections>
