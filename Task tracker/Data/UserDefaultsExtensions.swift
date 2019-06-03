@@ -21,7 +21,7 @@ extension UserDefaults {
     class func takeList() -> [Task] {
         if let savedTasks = UserDefaults.standard.object(forKey: "userTaskList") as? Data {
             if let decodedTasks = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedTasks) as? [Task] {
-                return decodedTasks
+                return decodedTasks ?? []
             } else {
                 return []
             }

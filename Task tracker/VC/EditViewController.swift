@@ -36,16 +36,30 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         if taskID != -1 {
             setup()
-            //statusLabel.text = taskList[taskID].status
-            titleText.text = taskList[taskID].taskName
-            noteText.text = taskList[taskID].taskDescription
-            timePicker.date = taskList[taskID].taskDate
+            let curTask = taskList[taskID]
+            titleText.text = curTask.taskName
+            noteText.text = curTask.taskDescription
+            timePicker.date = curTask.taskDate
+            segControl.selectedSegmentIndex = returnStatIndex(status: curTask.status)
             //timePicker.text = dateFormater.string(from: taskList[taskID].taskDate)
         } else {
             //statusLabel.text = "task not found"
             titleText.text = "task not found"
             noteText.text = "task not found"
             timePicker.date = Date()
+        }
+    }
+    
+    func returnStatIndex(status: String) -> Int{
+        switch status {
+        case "Новая":
+            return 0
+        case "В процессе":
+            return 1
+        case "Выполнена":
+            return 2
+        default:
+            return 0
         }
     }
     
@@ -95,7 +109,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         case 1:
             status = "В процессе"
         case 2:
-            status = "Выволнена"
+            status = "Выполнена"
         default:
             print("didn't select any")
         }
