@@ -24,18 +24,32 @@ class ViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        print(firstTaskByDate().taskName)
         UserDefaults.saveListToUD(list: taskList)
         mainTableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         UserDefaults.saveListToUD(list: taskList)
+        UserDefaults.init(suiteName: "group.com.andreyminin.taskTracker")?.set(firstTaskByDate().taskName, forKey: "name")
     }
     
     func setup() {
         dateFormater.locale = NSLocale.current
         dateFormater.dateStyle = .medium
         dateFormater.timeStyle = .short
+    }
+    
+    func firstTaskByDate() -> Task {
+        let sortedTaskList = taskList.sorted(by: comparator(t1:t2:))
+        guard let firstPriorityTask = sortedTaskList.first else {
+            return Task(name: "Not tasks yet", date: Date(), descr: "", stat: "")
+        }
+        return firstPriorityTask
+    }
+    
+    func comparator(t1: Task, t2: Task) -> Bool {
+        return (t1.taskDate < t2.taskDate) || (t1.taskDate == t2.taskDate && t1.taskName < t2.taskName)
     }
 }
 

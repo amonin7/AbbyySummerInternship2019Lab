@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E654F3522A540380022B0C4 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E654F3422A540380022B0C4 /* NotificationCenter.framework */; };
+		2E654F3822A540380022B0C4 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E654F3722A540380022B0C4 /* TodayViewController.swift */; };
+		2E654F3B22A540380022B0C4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E654F3922A540380022B0C4 /* MainInterface.storyboard */; };
+		2E654F3F22A540380022B0C4 /* extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2E654F3222A540380022B0C4 /* extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E82723822A1315F00C6AFE0 /* EditStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E82723722A1315F00C6AFE0 /* EditStoryboard.storyboard */; };
 		2E82723A22A1321C00C6AFE0 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E82723922A1321C00C6AFE0 /* EditViewController.swift */; };
 		2E82723C22A1ABB400C6AFE0 /* DetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E82723B22A1ABB400C6AFE0 /* DetailsStoryboard.storyboard */; };
@@ -23,7 +27,38 @@
 		2E8CA89F22A0025500E470F7 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CA89E22A0025500E470F7 /* MyCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2E654F3D22A540380022B0C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E8CA851229EC1F900E470F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E654F3122A540380022B0C4;
+			remoteInfo = extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2E654F4322A540380022B0C4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2E654F3F22A540380022B0C4 /* extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2E654F3222A540380022B0C4 /* extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E654F3422A540380022B0C4 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		2E654F3722A540380022B0C4 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		2E654F3A22A540380022B0C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		2E654F3C22A540380022B0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E654F4422A541080022B0C4 /* Task tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Task tracker.entitlements"; sourceTree = "<group>"; };
+		2E654F4522A5416E0022B0C4 /* extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = extension.entitlements; sourceTree = "<group>"; };
 		2E82723722A1315F00C6AFE0 /* EditStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditStoryboard.storyboard; sourceTree = "<group>"; };
 		2E82723922A1321C00C6AFE0 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		2E82723B22A1ABB400C6AFE0 /* DetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -43,6 +78,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2E654F2F22A540380022B0C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E654F3522A540380022B0C4 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E8CA856229EC1F900E470F7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,10 +96,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E654F3322A540380022B0C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E654F3422A540380022B0C4 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E654F3622A540380022B0C4 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				2E654F4522A5416E0022B0C4 /* extension.entitlements */,
+				2E654F3722A540380022B0C4 /* TodayViewController.swift */,
+				2E654F3922A540380022B0C4 /* MainInterface.storyboard */,
+				2E654F3C22A540380022B0C4 /* Info.plist */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		2E8CA850229EC1F900E470F7 = {
 			isa = PBXGroup;
 			children = (
 				2E8CA85B229EC1F900E470F7 /* Task tracker */,
+				2E654F3622A540380022B0C4 /* extension */,
+				2E654F3322A540380022B0C4 /* Frameworks */,
 				2E8CA85A229EC1F900E470F7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				2E8CA859229EC1F900E470F7 /* Task tracker.app */,
+				2E654F3222A540380022B0C4 /* extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +137,7 @@
 		2E8CA85B229EC1F900E470F7 /* Task tracker */ = {
 			isa = PBXGroup;
 			children = (
+				2E654F4422A541080022B0C4 /* Task tracker.entitlements */,
 				2E8CA89B229EF8F000E470F7 /* VC */,
 				2E8CA89C229EF8F900E470F7 /* Data */,
 				2E8CA89D229EF91100E470F7 /* Storyboards */,
@@ -118,6 +184,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2E654F3122A540380022B0C4 /* extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E654F4022A540380022B0C4 /* Build configuration list for PBXNativeTarget "extension" */;
+			buildPhases = (
+				2E654F2E22A540380022B0C4 /* Sources */,
+				2E654F2F22A540380022B0C4 /* Frameworks */,
+				2E654F3022A540380022B0C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = extension;
+			productName = extension;
+			productReference = 2E654F3222A540380022B0C4 /* extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2E8CA858229EC1F900E470F7 /* Task tracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E8CA86E229EC1FD00E470F7 /* Build configuration list for PBXNativeTarget "Task tracker" */;
@@ -125,10 +208,12 @@
 				2E8CA855229EC1F900E470F7 /* Sources */,
 				2E8CA856229EC1F900E470F7 /* Frameworks */,
 				2E8CA857229EC1F900E470F7 /* Resources */,
+				2E654F4322A540380022B0C4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2E654F3E22A540380022B0C4 /* PBXTargetDependency */,
 			);
 			name = "Task tracker";
 			productName = "Task tracker";
@@ -145,8 +230,21 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Andrey Minin";
 				TargetAttributes = {
+					2E654F3122A540380022B0C4 = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					2E8CA858229EC1F900E470F7 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -164,11 +262,20 @@
 			projectRoot = "";
 			targets = (
 				2E8CA858229EC1F900E470F7 /* Task tracker */,
+				2E654F3122A540380022B0C4 /* extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2E654F3022A540380022B0C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E654F3B22A540380022B0C4 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E8CA857229EC1F900E470F7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,6 +291,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2E654F2E22A540380022B0C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E654F3822A540380022B0C4 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E8CA855229EC1F900E470F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,7 +317,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2E654F3E22A540380022B0C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E654F3122A540380022B0C4 /* extension */;
+			targetProxy = 2E654F3D22A540380022B0C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		2E654F3922A540380022B0C4 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E654F3A22A540380022B0C4 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		2E8CA860229EC1F900E470F7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -222,6 +353,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2E654F4122A540380022B0C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = extension/extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4WS8YA4HU;
+				INFOPLIST_FILE = extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.tcsbank.Task-tracker.extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E654F4222A540380022B0C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = extension/extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q4WS8YA4HU;
+				INFOPLIST_FILE = extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.tcsbank.Task-tracker.extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2E8CA86C229EC1FD00E470F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -341,7 +512,9 @@
 		2E8CA86F229EC1FD00E470F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Task tracker/Task tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4WS8YA4HU;
 				INFOPLIST_FILE = "Task tracker/Info.plist";
@@ -359,7 +532,9 @@
 		2E8CA870229EC1FD00E470F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Task tracker/Task tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4WS8YA4HU;
 				INFOPLIST_FILE = "Task tracker/Info.plist";
@@ -377,6 +552,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2E654F4022A540380022B0C4 /* Build configuration list for PBXNativeTarget "extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E654F4122A540380022B0C4 /* Debug */,
+				2E654F4222A540380022B0C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2E8CA854229EC1F900E470F7 /* Build configuration list for PBXProject "Task tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
