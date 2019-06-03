@@ -75,7 +75,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
         case 1:
             status = "В процессе"
         case 2:
-            status = "Выволнена"
+            status = "Выполнена"
         default:
             print("didn't select any")
         }

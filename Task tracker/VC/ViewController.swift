@@ -42,10 +42,12 @@ class ViewController: UIViewController {
     
     func firstTaskByDate() -> Task {
         let sortedTaskList = taskList.sorted(by: comparator(t1:t2:))
-        guard let firstPriorityTask = sortedTaskList.first else {
-            return Task(name: "Not tasks yet", date: Date(), descr: "", stat: "")
+        for task in sortedTaskList {
+            if task.status != "Выполнена" {
+                return task
+            }
         }
-        return firstPriorityTask
+        return Task(name: "Not tasks yet", date: Date(), descr: "", stat: "")
     }
     
     func comparator(t1: Task, t2: Task) -> Bool {

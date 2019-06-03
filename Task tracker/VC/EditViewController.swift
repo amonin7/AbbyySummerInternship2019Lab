@@ -41,9 +41,8 @@ class EditViewController: UIViewController, UITextFieldDelegate {
             noteText.text = curTask.taskDescription
             timePicker.date = curTask.taskDate
             segControl.selectedSegmentIndex = returnStatIndex(status: curTask.status)
-            //timePicker.text = dateFormater.string(from: taskList[taskID].taskDate)
+            status = curTask.status
         } else {
-            //statusLabel.text = "task not found"
             titleText.text = "task not found"
             noteText.text = "task not found"
             timePicker.date = Date()
